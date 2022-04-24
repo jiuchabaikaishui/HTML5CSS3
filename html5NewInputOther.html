@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" id="myForm">
+    <!--占位符、获取焦点、自动完成（必须提交之后才能记录、必须设置name，on/off打开/关闭）-->
+    用户名：<input type="text" name="userName" placeholder="请输入用户名" autofocus autocomplete="on"> <br>
+    <!--必须输入、正则表达式-->
+    手机号：<input type="tel" name="telephoneNumber" required pattern="^(\+86)?1(3|4|5|7|8)\d{9}$"> <br>
+    <!--多个值-->
+    文件：<input type="file" name="photo" multiple> <br>
+    <!--输入多个值需要用逗号分隔-->
+    email：<input type="email" name="email" multiple> <br>
+    <input type="submit">
+</form>
+<!--指定表单id，将表单元素 数据加入到指定表单提交-->
+地址：<input type="text" name="address" form="myForm">
+
+</body>
+</html>

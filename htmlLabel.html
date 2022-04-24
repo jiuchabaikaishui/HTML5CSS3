@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+
+    <style type="text/css">
+        body{
+            background-color: bisque;
+        }
+        div.header{
+            background-color: red;
+            width: 100%;
+            height: 64px;
+        }
+        div.nav{
+            background-color: green;
+            width: 100%;
+            height: 44px;
+        }
+        div.article{
+            background-color: cyan;
+            width: 60%;
+            height: 500px;
+            float: left;
+        }
+        div.aside{
+            background-color: purple;
+            width: 20%;
+            height: 500px;
+            float: right;
+        }
+        div.footer{
+            background-color: yellow;
+            width: 100%;
+            height: 49px;
+            /*需要清除浮动属性，否则没有空间显示*/
+            clear: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">头部</div>
+<div class="nav">导航</div>
+<div class="article">主体左侧</div>
+<div class="aside">主体右侧</div>
+<div class="footer">尾部</div>
+
+</body>
+</html>
