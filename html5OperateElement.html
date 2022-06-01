@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>第一个</li>
+    <li class="blue">第二个</li>
+    <li>第三个</li>
+    <li class="red">第四个</li>
+</ul>
+
+<input type="button" value="获取第二个元素li样式" id="items">
+<input type="button" value="设置第三个li元素样式" id="classname"> <br/>
+<hr>
+<input type="button" value="为第一个li元素添加样式" id="add">
+<input type="button" value="为第二个li元素移除样式" id="remove">
+<input type="button" value="为第三个li元素更换样式" id="toggle">
+<input type="button" value="判断第四个li元素是否包含某个样式" id="contains">
+
+<script>
+    window.onload = function () {
+        document.querySelector("#items").onclick = function () {
+            /*classList.item：获取元素已经添加的样式，通过参数来确定取添加的第几个样式*/
+            var value = document.querySelectorAll("li")[1].classList.item(0);
+            console.log(value);
+        }
+        document.querySelector("#classname").onclick = function () {
+            /*className：设置元素样式，可以设置多个但是会覆盖掉原有样式*/
+            document.querySelectorAll("li")[2].className = "red underline";
+        }
+
+        /*add：为元素添加指定名称的样式，一次只能添加一个样式*/
+        document.querySelector("#add").onclick = function () {
+            /*classList：当前元素所有样式列表-数组*/
+            document.querySelector("li").classList.add("red");
+            document.querySelector("li").classList.add("underline")
+        }
+        /*remove：为元素移除指定名称的样式（而不是属性），一次只能移除一个样式*/
+        document.querySelector("#remove").onclick = function () {
+            document.querySelector(".blue").classList.remove("blue");
+        }
+        /*toggle：切换元素样式，之前元素没有指定名称的样式就添加，否则移除。*/
+        document.querySelector("#toggle").onclick = function () {
+            document.querySelectorAll("li")[2].classList.toggle("green")
+        }
+        /*contains：判断元素是否包含指定名称的的样式，返回true/false*/
+        document.querySelector("#contains").onclick = function () {
+            var isContains = document.querySelectorAll("li")[3].classList.contains("red");
+            console.log(isContains);
+        }
+    }
+</script>
+
+</body>
+</html>

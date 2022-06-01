@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .red {
+            color: red;
+        }
+        .green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li class="red">红</li>
+    <li class="green">绿</li>
+    <li class="blue" id="blue">蓝</li>
+</ul>
+
+<script>
+    /*获取li标签*/
+    window.onload = function () {
+        /*getElementsByTagName：获取的是数组
+            使用索引不直观，一般数据都是后台
+        */
+        var liValue = document.getElementsByTagName("li")[1];
+        console.log(liValue);
+
+        /*querySelector：查询选择器（传入选择器名称）
+            获取单个元素，如果获取的元素不止一个，返回满足条件的第一个
+            参数要求：类选择器必须添加.；id选择器必须添加#；否则会当成标签处理
+        */
+        var quryLi = document.querySelector("li");
+        console.log(quryLi)
+        var greenLi = document.querySelector(".green");
+        console.log(greenLi)
+        var blueLi = document.querySelector("#blue");
+        console.log(blueLi)
+
+        /*querySelectorAll：获取满足条件的所有元素-数组*/
+        var allLi = document.querySelectorAll("li")
+        console.log(allLi)
+    }
+</script>
+
+</body>
+</html>
