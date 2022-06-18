@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.div1 {
+            border: 1px solid red;
+            width: 300px;
+            height: 300px;
+            float: left;
+            position: relative;
+        }
+        p {
+            margin: 0;
+            background-color: blue;
+        }
+        div.div2 {
+            border: 1px solid cyan;
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1" id="div1">
+    <!--在h5中，拖拽元素必须添加draggable="true"属性，图片和超链接默认可以拖拽-->
+    <p id="pe" draggable="true">我是文字，拖我！</p>
+</div>
+
+<div class="div2" id="div2">
+
+</div>
+
+<script>
+    /*被拖拽元素事件：
+        ondrag：拖拽过程中调用——持续触发
+        ondragstart：拖拽开始时调用
+        ondragend：拖拽结束调用
+        ondragleave：鼠标离开拖拽元素原本位置/松开鼠标时调用
+    * */
+    var pe = document.querySelector("#pe");
+    pe.ondrag = function () {
+        console.log("正在拖拽");
+    }
+    pe.ondragstart = function () {
+        console.log("开始拖拽");
+    }
+    pe.ondragend = function () {
+        console.log("结束拖拽");
+    }
+    pe.ondragleave = function () {
+        console.log("鼠标离开");
+    }
+
+    /*目标元素事件：
+        ondragenter：应用于目标元素，当拖拽元素进入时调用
+        ondragover：应用于目标元素，当停留在目标元素上时调用
+        ondrop：应用于目标元素，当在目标元素上松开鼠标时调用
+        ondragleave：应用于目标元素，当鼠标离开目标元素时调用
+    * */
+    var div2 = document.querySelector("#div2");
+    div2.ondragenter = function () {
+        console.log("已经进入")
+    }
+    div2.ondragover = function (e) {
+        /*console.log("正在停留")*/
+        /*如果想触发ondrap事件，必须在ondragover事件中禁止浏览器默认行为*/
+        e.preventDefault()
+    }
+    div2.ondrop = function () {
+        console.log("松开鼠标")
+        div2.appendChild(pe);
+    }
+    div2.ondragleave = function (){
+        console.log("离开目标")
+    }
+
+    /*给div1加上往回拖拽的功能*/
+    var div1 = document.querySelector("#div1");
+    div1.ondragover = function (e){
+        e.preventDefault();
+    }
+    div1.ondrop = function () {
+        div1.appendChild(pe);
+    }
+</script>
+
+</body>
+</html>

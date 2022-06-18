@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <img src="images/huliena.jpeg" alt="" width="810" height="540"> <br/>
+    <input type="button" id="fullscreen" value="开启全屏">
+    <input type="button" id="exitFullscreen" value="退出全屏">
+    <input type="button" id="isFullscreen" value="是否全屏">
+</div>
+
+<script>
+    /*全屏操作方法和属性：
+        1、requestFullscreen()：开启全屏显示
+            不同浏览器需要加不同前缀：chrome/safari-webkit，firefox-moz，ie-ms，oprea-o
+        2、exitFullscreen()：退出全屏显示
+            不同浏览器也需要加上述不同前缀，退出全屏只能使用document来实现
+        3、fullscreenElement：是否是全屏显示状态
+            不同浏览器也需要加上述不同前缀，也只能使用document来判断
+    */
+    window.onload = function () {
+        var div = document.querySelector("div");
+        /*全屏操作*/
+        document.querySelector("#fullscreen").onclick = function () {
+            /*使用能力测试添加不同浏览器前缀*/
+            if (div.requestFullscreen) {
+                div.requestFullscreen();
+            } else if (div.webkitRequestFullscreen) {
+                div.webkitRequestFullscreen();
+            } else if (div.mozRequestFullscreen) {
+                div.mozRequestFullscreen();
+            } else if (div.msRequestFullscreen) {
+                div.msRequestFullscreen();
+            }
+        };
+
+        /*退出全屏*/
+        document.querySelector("#exitFullscreen").onclick = function () {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozExitFullscreen) {
+                document.mozExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+
+        /*判断是否是全屏*/
+        document.querySelector("#isFullscreen").onclick = function () {
+            if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullscreenElement || document.msFullscreenElement) {
+                console.log("true");
+            } else {
+                console.log("false")
+            }
+        }
+    }
+</script>
+</body>
+</html>
