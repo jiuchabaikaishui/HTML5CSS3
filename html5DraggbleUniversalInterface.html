@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div.div1 {
+            border: 1px solid red;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        p {
+            margin-top: 5px;
+            background-color: blue;
+        }
+        div.div2 {
+            border: 1px solid cyan;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        div.div3 {
+            border: 1px solid purple;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1" id="div1">
+    <!--在h5中，拖拽元素必须添加draggable="true"属性，图片和超链接默认可以拖拽-->
+    <p id="pe" draggable="true">我是文字，拖我！</p>
+    <p id="pe1" draggable="true">我也是文字，拖我！</p>
+</div>
+
+<div class="div2" id="div2">
+
+</div>
+
+<div class="div3" id="div3">
+
+</div>
+
+<script>
+    var pe = document.querySelector("#pe");
+    var obj = null;
+    document.ondragstart = function (e) {
+        /*通过时间捕获来获取当前被拖拽的元素*/
+        e.target.style.alpha = 0.2;
+        e.target.parentNode.style.borderWidth = "5px";
+        obj = e.target;
+    }
+    document.ondragend = function (e) {
+        e.target.style.alpha = 1.0;
+        e.target.parentNode.style.borderWidth = "1px";
+    }
+
+    document.ondragover = function (e) {
+        /*console.log("正在停留")*/
+        /*如果想触发ondrap事件，必须在ondragover事件中禁止浏览器默认行为*/
+        e.preventDefault()
+    }
+    document.ondrop = function (e) {
+        e.target.appendChild(obj);
+    }
+</script>
+
+</body>
+</html>

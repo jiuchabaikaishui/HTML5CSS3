@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="">
+    <!--及时预览：
+            1、及时：选择文件后立刻预览处理——onchange
+            2、预览：通过读取对象的完成
+    -->
+    文件：<input type="file" name="myFile" id="myFile" onchange="getFileContent();">
+</form>
+
+<!--src：指定路径（资源定位——url），请求的是外部资源，一般来说是服务器资源，意味着需要像服务器发送请求，占用服务器资源。-->
+<img src="" alt="">
+
+<script>
+    /*fileReader：读取文件内容
+        ：读取文本文件，返回字符串（默认编码utf8）
+        ：读取任意类型的文件，返回二进制字符串，不是用来读取文件给用户看而是用来存储文件。例如——读取文件获取二进制数据传给后台，
+        后台收到数据再存储。
+        ：读取文件获取一段以data开头的字符串，这段字符串的本质就是DataURL.DataURL是一种将文件嵌入到文档的方案。DataURL是
+        将资源转化为base64编码的字符串，并且将这些内容直接存储在URL中。优化网页加载速度和执行效率。
+        ：中断执行效率。
+    * */
+    function getFileContent() {
+        /*读取文件：
+            1、创建读取对象
+            2、获取文件，读取DataURL
+                没有任何返回值——void，读完文件后会将存储在文件读取对象的result中
+                需要传递一个参数binary large object文件(图片或其他可以嵌入到文档的类型)
+                文件存储在file表单元素的files属性中，它是一个数组
+            3、获取数据——fileReader提供完整的事件模型用来捕获读取文件的状态
+                onabort：读取文件中断触发
+                onerror：读取文件错误时触发
+                onload：读取文件成功时触发
+                onloadend：读取文件完成时触发，无论成功还是失败
+                onloadstart：开始读取触发
+                onloadprogress：读取过程中触发
+        * */
+        var reader = new FileReader();
+        var file = document.querySelector("#myFile").files[0];
+        reader.readAsDataURL(file)
+        reader.onload = function () {
+            document.querySelector("img").src = reader.result;
+        }
+    }
+</script>
+
+</body>
+</html>

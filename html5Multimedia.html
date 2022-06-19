@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--audio标签
+src：音频文件路径
+controls：播放控制面板
+autoplay：自动播放
+loop：循环
+-->
+<audio src="mp3/y857.wav" controls autoplay loop></audio> <br/>
+
+<!--video标签
+src：视频文件路径
+controls：播放控制面板
+autoplay：自动播放
+loop：循环
+width：宽度（一般只设置宽度或者高度，如果同时设置视频不会调整到非等比的宽高，）
+height：高度
+poster：视频播放前的封面，默认为当前视频的第一帧画面
+-->
+<video src="mp3/1653902590493958.mp4" controls width="108" height="108" poster="images/huliena.jpeg"></video> <br/>
+
+<!--source标签
+不同浏览器支持的视频格式不一样，准备多个视频格式文件供浏览器选择。
+-->
+<video controls>
+    <source src="mp3/1653902590493958.flv" type="video/flv">
+    <source src="mp3/1653902590493958.mp4" type="video/mp4">
+    当前浏览器不支持
+</video>
+
+</body>
+</html>

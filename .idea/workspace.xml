@@ -1,22 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="a56db9bf-6795-4003-9549-87e90dd901d0" name="Default Changelist" comment="" />
+=======
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f4745510-36cf-41fe-8833-6f1f0da9d22e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/html5DraggbleInterface.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html5DraggbleUniversalInterface.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html5FileReaderInterface.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html5FullScreenInterface.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html5NetInterface.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2An0nS3MoMEwk9QBr2XREok6QO3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2906q9FJhoDW3qeis0Ui2eyxMia" />
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -31,10 +78,84 @@
       <option name="presentableId" value="Default" />
       <updated>1655630211283</updated>
       <workItem from="1655630216685" duration="537000" />
+=======
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4745510-36cf-41fe-8833-6f1f0da9d22e" name="Default Changelist" comment="" />
+      <created>1652237844220</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652237844220</updated>
+      <workItem from="1652237845471" duration="24372000" />
+      <workItem from="1653267995257" duration="17275000" />
+      <workItem from="1653881230468" duration="35452000" />
+      <workItem from="1654162231100" duration="722000" />
+      <workItem from="1654214523534" duration="1641000" />
+      <workItem from="1654216743016" duration="105000" />
+      <workItem from="1654217123976" duration="61000" />
+      <workItem from="1654217207072" duration="192000" />
+      <workItem from="1654217972130" duration="489000" />
+      <workItem from="1654394803642" duration="15604000" />
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
     <option name="version" value="3" />
+=======
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="524" y="279" key="#Notifications" timestamp="1654217232476">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="524" y="279" key="#Notifications/0.25.1280.775@0.25.1280.775" timestamp="1654217232476" />
+    <state x="429" y="195" key="#Web_Browsers" timestamp="1654075952868">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="429" y="195" key="#Web_Browsers/0.25.1280.775@0.25.1280.775" timestamp="1654075952868" />
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1654150728037">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1654150728037" />
+    <state x="149" y="48" key="SettingsEditor" timestamp="1654394815401">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="149" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1654394815401" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1654395808227">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1654395808227" />
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
   </component>
 </project>
