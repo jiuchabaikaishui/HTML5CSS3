@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="ChangeListManager">
+    <list default="true" id="a56db9bf-6795-4003-9549-87e90dd901d0" name="Default Changelist" comment="" />
+=======
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -29,11 +33,19 @@
       <change beforePath="$PROJECT_DIR$/html5DraggbleUniversalInterface.html" beforeDir="false" afterPath="$PROJECT_DIR$/html5DraggbleUniversalInterface.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2An0nS3MoMEwk9QBr2XREok6QO3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -52,11 +64,28 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="2906q9FJhoDW3qeis0Ui2eyxMia" />
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a56db9bf-6795-4003-9549-87e90dd901d0" name="Default Changelist" comment="" />
+      <created>1655630211283</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655630211283</updated>
+      <workItem from="1655630216685" duration="537000" />
+=======
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -91,6 +120,7 @@
       <workItem from="1654217207072" duration="192000" />
       <workItem from="1654217972130" duration="489000" />
       <workItem from="1654394803642" duration="15604000" />
+<<<<<<< HEAD
       <workItem from="1655974505420" duration="9406000" />
       <workItem from="1656926122658" duration="621000" />
       <workItem from="1657010380466" duration="1740000" />
@@ -112,10 +142,16 @@
       <workItem from="1658741455947" duration="596000" />
       <workItem from="1658821527039" duration="1716000" />
       <workItem from="1658993271921" duration="1316000" />
+=======
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
+>>>>>>> 4ebde280a7ecbcf3609c9dadd489dafe55b74036
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
+<<<<<<< HEAD
+    <option name="version" value="3" />
+=======
     <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +190,11 @@
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1658738838502">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
+<<<<<<< HEAD
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1658738838502" />
+=======
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1654395808227" />
+>>>>>>> 762b04e0038f84fde5951766d134d914305f969e
+>>>>>>> 4ebde280a7ecbcf3609c9dadd489dafe55b74036
   </component>
 </project>
