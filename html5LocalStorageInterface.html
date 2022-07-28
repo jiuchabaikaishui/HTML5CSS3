@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px 0px 0px 10px;
+            padding: 0;
+        }
+        input {
+            margin: 10px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+localStorage：容量20MB左右
+    1、不同浏览器不能共享数据，但是同一个浏览器的不同窗口可以共享数据
+    2、永久生效，不会随着页面关闭而删除，如果想删除必须手动删除
+setItem(key, value)：存储数据，以键值对的方式存储
+getItem(key)：获取数据，（如果找不到对应的key，就会获得null）
+removeItem(key)：删除数据
+clear：清空所以存储内容
+-->
+
+key：<input type="text", id="key"> <br/>
+value：<input type="text" id="value"> <br/>
+<input type="button" id="setData" value="存储数据" onclick="saveAction()">
+<input type="button" id="getData" value="获取数据" onclick="getAction()">
+<input type="button" id="removeData" value="移除数据" onclick="removeAction()">
+<input type="button" id="clearData" value="清空数据" onclick="clearAction()">
+
+<script>
+    function saveAction() {
+        console.log("saveAction");
+        var key = document.querySelector("#key").value;
+        var value = document.querySelector("#value").value;
+        window.localStorage.setItem(key, value);
+    }
+    function getAction() {
+        console.log("getAction");
+        var key = document.querySelector("#key").value;
+        alert(window.localStorage.getItem(key));
+    }
+    function removeAction() {
+        console.log("removeAction");
+        var key = document.querySelector("#key").value;
+        window.localStorage.removeItem(key);
+    }
+    function clearAction() {
+        console.log("clearAction");
+        window.localStorage.clear();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0px 0px 0px 10px;
+            padding: 0;
+        }
+        input {
+            margin: 10px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+sessionStorage：存储数据到本地，容量5MB左右
+    1、本质存储在本页内存中
+    2、生命周期为当前页面，关闭后就会被清除，前进/后退不受影响
+setItem(key, value)：存储数据，以键值对的方式存储
+getItem(key)：获取数据，（如果找不到对应的key，就会获得null）
+removeItem(key)：删除数据
+clear：清空所以存储内容
+-->
+
+key：<input type="text", id="key"> <br/>
+value：<input type="text" id="value"> <br/>
+<input type="button" id="setData" value="存储数据" onclick="saveAction()">
+<input type="button" id="getData" value="获取数据" onclick="getAction()">
+<input type="button" id="removeData" value="移除数据" onclick="removeAction()">
+<input type="button" id="clearData" value="清空数据" onclick="clearAction()">
+
+<script>
+    function saveAction() {
+        console.log("saveAction");
+        var key = document.querySelector("#key").value;
+        var value = document.querySelector("#value").value;
+        window.sessionStorage.setItem(key, value);
+    }
+    function getAction() {
+        console.log("getAction");
+        var key = document.querySelector("#key").value;
+        alert(window.sessionStorage.getItem(key));
+    }
+    function removeAction() {
+        console.log("removeAction");
+        var key = document.querySelector("#key").value;
+        window.sessionStorage.removeItem(key);
+    }
+    function clearAction() {
+        console.log("clearAction");
+        window.sessionStorage.clear();
+    }
+</script>
+</body>
+</html>

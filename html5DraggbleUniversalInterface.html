@@ -57,15 +57,23 @@
 <script>
     var pe = document.querySelector("#pe");
     var obj = null;
+    var target = null;
     document.ondragstart = function (e) {
-        /*通过时间捕获来获取当前被拖拽的元素*/
+        /*通过事件捕获来获取当前被拖拽的子元素*/
+        target = e.target.parentNode;
         e.target.style.alpha = 0.2;
         e.target.parentNode.style.borderWidth = "5px";
         obj = e.target;
+
+        /*通过datatransfer来实现数据的存储与获取
+        * format：数据类型text/plain、text/urilist
+        * data：数据一般来说是字符串值
+        * */
+        e.dataTransfer.setData("text/plain", e.target.id);
     }
     document.ondragend = function (e) {
         e.target.style.alpha = 1.0;
-        e.target.parentNode.style.borderWidth = "1px";
+        target.style.borderWidth = "1px";
     }
 
     document.ondragover = function (e) {
@@ -74,7 +82,15 @@
         e.preventDefault()
     }
     document.ondrop = function (e) {
+        /*console.log(obj);
         e.target.appendChild(obj);
+        console.log(e.target);*/
+
+        /*通过dataTransfer.setData存储的数据只能在ondrop中取*/
+        var id = e.dataTransfer.getData("text/plain");
+        var element = document.getElementById(id);
+        if (e.target.class=="")
+        e.target.appendChild(element);
     }
 </script>
 

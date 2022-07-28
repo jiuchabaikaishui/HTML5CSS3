@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.demo {
+            width: 200px;
+            height: 200px;
+            border: 1px solid cyan;
+        }
+    </style>
+</head>
+<body>
+
+<div class="demo", id="demo"></div>
+
+<script>
+    var demo = document.getElementById("demo");
+    function getLoction() {
+        demo.innerHTML = "定位";
+        /*能力测试：是否有定位功能*/
+        if (navigator.geolocation) {
+            /*
+            successCallback：获取定位信息成功回调
+            errorCallback：失败回调
+            options：设置获取数据方式（对象）
+                anableHighAccuracy：ture/false是否开启高精度
+                timeout：设置超时时间，单位毫秒ms
+                maximumAge：设置浏览器重新获取地理信息的时间，单位毫秒ms
+             */
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {anableHighAccuracy: false, timeout: 3000});
+        } else {
+            demo.innerHTML = "Geolocation is not surpported by this browser."
+        }
+    }
+
+    /*定位成功，会将地理信息传递给回调函数*/
+    function successCallback(positon) {
+        console.log(positon);
+        /*
+        * latitude：经度
+        * longitude：纬度
+        * accuracy：精度
+        * altitude：海拔高度*/
+        demo.innerHTML = "Latitude: " + positon.coords.latitude + "<br/>Longitude: " + positon.coords.longitude
+    }
+    function errorCallback(error) {
+        console.log(error);
+        switch (error.code) {
+            /*用户拒绝定位请求*/
+            case error.PERMISSION_DENIED:
+                demo.innerHTML = "User denied the request for geoloction.";
+                break;
+            /*定位信息不可用*/
+            case error.POSITION_UNAVAILABLE:
+                demo.innerHTML = "Position information is unavailable.";
+                break;
+            /*请求超时*/
+            case error.TIMEOUT:
+                demo.innerHTML = "The request to get user location time out.";
+                break;
+            /*未知错误*/
+            case error.UNKNOWN_ERR:
+                demo.innerHTML = "An unknow error occured.";
+                break;
+        }
+    }
+
+    getLoction();
+</script>
+
+</body>
+</html>
