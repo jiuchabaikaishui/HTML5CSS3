@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 上面这句标记当前文件是缓存清单文件，第一句必须是这句
+
+# 需要缓存的文件清单
+CACHE:
+../images/one.png
+../images/two.png
+
+# 每次都需要重新从服务器获取的资源文件清单
+NETWORK:
+../images/three.png
+# *: 代表所有文件
+
+# 如果文件无法获取则使用指定的文件替代
+FALLBACK:
+../images/fou.png ../images/huliena.jpeg
+# /: 代表所有文件
