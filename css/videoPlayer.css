@@ -1,0 +1,116 @@
+body {
+    padding: 0px;   /*内边距（上右下左），不允许使用赋值*/
+    margin: 0px;   /*外边距（上右下左），允许使用赋值*/
+    font-family: 'microsoft yahei', 'Helvetica', simhei, simsun, SansSerif;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;  /*添加到文本的修饰*/
+}
+
+.playerTitle {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.player {
+    width: 720px;
+    height: 360px;
+    margin: 0 auto;
+    background: url("mp3/699pic.gif") center no-repeat;
+    background-size: cover;
+    position: relative; /*规定应用于元素的定位方法：*/
+}
+
+video {
+    height: 100%;
+    margin: 0 auto;
+    display: none;
+}
+
+.controls {
+    width: 720px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    bottom: -40px;
+    background-color: #000000;
+}
+
+.controls > .switch {
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.controls > .expand {
+    width: 20px;
+    height: 20px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.controls > .progress {
+    width: 430px;
+    height: 10px;
+    position: absolute;
+    left: 40px;
+    bottom: 15px;
+    background-color: #555555;
+}
+
+.controls > .progress > .bar {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    border-radius: 3px;
+    opacity: 0;
+    cursor: pointer;    /*光标类型*/
+}
+
+.controls > .progress > .loaded {
+    width: 60%;
+    height: 100%;
+    background-color: #999999;
+    border-radius: 3px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+}
+
+.controls > .progress > .elapse {
+    width: 0%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+
+.controls > .time {
+    height: 20px;
+    position: absolute;
+    left: 490px;
+    top: 10px;
+    color: #ffffff;
+    font-size: 14px;
+}
