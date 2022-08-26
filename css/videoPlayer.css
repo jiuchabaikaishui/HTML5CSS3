@@ -21,7 +21,7 @@ a {
     width: 720px;
     height: 360px;
     margin: 0 auto;
-    background: url("mp3/699pic.gif") center no-repeat;
+    background: url("../mp3/699pic.gif") center no-repeat;
     background-size: cover;
     position: relative; /*规定应用于元素的定位方法：*/
 }
@@ -29,7 +29,7 @@ a {
 video {
     height: 100%;
     margin: 0 auto;
-    display: none;
+    display: none;  /*规定是否/如何显示元素*/
 }
 
 .controls {

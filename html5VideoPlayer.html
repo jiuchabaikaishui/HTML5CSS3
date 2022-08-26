@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/videoPlayer.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<i class="fa fa-camera-retro"></i> fa-camera-retro<br>
-<i class="fa fa-shield"></i> normal<br>
+
 <h3 class="playerTitle">视频播放器</h3>
 <div class="player">
     <video src="mp3/1653902590493958.mp4"></video>
     <div class="controls">
-        <a href="javascrit:;" class="switch fa fa-play"></a>
-        <a href="javascrit:;" class="expand fa fa-expand"></a>
+        <a class="switch fa fa-play"></a>
+        <a class="expand fa fa-expand"></a>
         <div class="progress">
             <div class="bar"></div>
             <div class="loaded"></div>
@@ -30,6 +31,38 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $(function () {
+        /*获取播放器*/
+        var video = $("video")[0];
+
+        /*实现播放与暂停*/
+        $(".switch").click(function() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+            /*设置标签样式*/
+            $(this).toggleClass("fa-play fa-pause");
+        });
+
+        /*实现全屏*/
+        $(".expand").click(function () {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.mozRequestFullscreen) {
+                video.mozRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
