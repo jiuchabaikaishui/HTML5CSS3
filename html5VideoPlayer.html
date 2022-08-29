@@ -25,9 +25,9 @@
             <div class="elapse"></div>
         </div>
         <div class="time">
-            <span class="currentTime">00：00：00</span>
+            <span class="currentTime">00:00:00</span>
             \
-            <span class="totalTime">00：00：00</span>
+            <span class="totalTime">00:00:00</span>
         </div>
     </div>
 </div>
@@ -61,6 +61,56 @@
                 video.msRequestFullscreen();
             }
         });
+
+        /*实现业务播放逻辑，当视频可以播放时触发*/
+        video.oncanplay = function () {
+            /*延迟1.5s，模拟加载时间*/
+            setTimeout(function () {
+                /*将视频设置为可见*/
+                video.style.display = "block";
+
+                /*视频总时长*/
+                var total = getTimeResult(video.duration);
+                $(".totalTime").html(total);
+            }, 1500);
+        };
+
+        /*获取时间格式化后的结果*/
+        function getTimeResult(time) {
+            var hour = Math.floor(time/3600);
+            hour = hour < 10 ? "0" + hour : hour;
+            var minute = Math.floor(time%3600/60);
+            minute = minute < 10 ? "0" + minute : minute;
+            var second = Math.floor(time%60);
+            second = second < 10 ? "0" + second : second;
+            return hour + ":" + minute + ":" + second;
+        }
+
+        /*实现播放过程中的业务逻辑，当currentTime值改变时（视频播放或者修改currentTime值）触发*/
+        video.ontimeupdate = function () {
+            /*已播放时间*/
+            var current = getTimeResult(video.currentTime);
+            $(".currentTime").html(current);
+
+            /*进度条*/
+            var percent = video.currentTime/video.duration*100 + "%";
+            $(".elapse").css("width", percent);
+        }
+
+        /*实现视频跳播*/
+        $(".bar").click(function (e) {
+            /*点击位置偏移比例*/
+            var percent = e.offsetX/$(this).width();
+            var current = video.duration*percent;
+            video.currentTime = current;
+        });
+
+        /*播放完毕，重置播放状态*/
+        video.onended = function () {
+            video.currentTime = 0;
+            /*$(".switch").toggleClass("fa-play fa-pause");*/
+            $(".switch").removeClass("fa-pause").addClass("fa-play");
+        }
     });
 </script>
 
