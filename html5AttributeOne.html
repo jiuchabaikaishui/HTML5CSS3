@@ -21,6 +21,8 @@
             background-color: white;
             width: 400px;
             margin: auto;
+            position: relative;
+            padding-bottom: 2000px;
         }
         h4 {
             padding-top: 10px;
@@ -69,11 +71,41 @@
             left: 0px;
             top: 0px;
         }
+        p.p10 {
+            background-color: cyan;
+            width: 400px;
+            position: absolute;
+            right: 100%;
+            top: 0;
+        }
+        p.p11 {
+            background-color: pink;
+            position: sticky;
+            top: 10px;
+            width: 400px;
+            margin: auto;
+            z-index: 999;
+        }
+        p.p12 {
+            background-color: yellow;
+            position: relative;
+            left: 100px;
+            top: -10px;
+            z-index: -1;
+        }
+        span {
+            margin-left: 20px;
+        }
+        input {
+            margin-top: 15px;
+            margin-left: 25px;
+        }
     </style>
 </head>
 <body>
 
 <h3>属性总结一</h3>
+<p class="p11">第--------------------------------------十一行</p>
 <div class="main">
     <h4>padding属性：</h4>
     <p class="p1">第--------------------------------------一行</p>
@@ -87,6 +119,13 @@
     <p class="p7">第--------------------------------------七行</p>
     <p class="p8">第--------------------------------------八行</p>
     <p class="p9">第--------------------------------------九行</p>
+    <p class="p10">第--------------------------------------十行</p>
+    <p class="p12">第--------------------------------------十二行</p>
+    <span>display隐藏</span>
+    <span>visibility隐藏</span>
+    <span>我是参照</span> <br/>
+    <input id="display" type="button" value="display隐藏">
+    <input id="visibility" type="button" value="visibility隐藏">
 </div>
 
 </body>
