@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            padding: 0px;
+            background-color: #cae8ca;
+        }
+        div {
+            margin: auto;
+            padding: 1px;
+            width: 80%;
+            background-color: antiquewhite;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .darkred {
+            color: darkred;
+        }
+        .blueviolet {
+            color: blueviolet;
+        }
+
+        li[style] {
+            text-decoration: underline;
+        }
+        li[class=red] {
+            font-size: 30px;
+        }
+        li[class*=red] {
+            background-color: cyan;
+        }
+        li[class^=red] {
+            border: 1px solid black;
+        }
+        li[class$=red] {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>属性选择器：</h2>
+    <ol>
+        <li class="red" style="">第一行</li>
+        <li class="blue">第二行</li>
+        <li class="darkred" style="">第三行</li>
+        <li class="blueviolet">第四行</li>
+        <li class="blue">第五行</li>
+        <li class="red">第六行</li>
+    </ol>
+</div>
+
+</body>
+</html>

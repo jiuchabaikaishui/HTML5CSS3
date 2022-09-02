@@ -126,7 +126,23 @@
     <span>我是参照</span> <br/>
     <input id="display" type="button" value="display隐藏">
     <input id="visibility" type="button" value="visibility隐藏">
+    <input id="reset" type="button" value="重置">
 </div>
+
+<script>
+    window.onload = function () {
+        document.getElementById("display").onclick = function () {
+            document.querySelectorAll("span")[0].style.display = "none";
+        }
+        document.getElementById("visibility").onclick = function () {
+            document.querySelectorAll("span")[1].style.visibility = "hidden";
+        }
+        document.getElementById("reset").onclick = function () {
+            document.querySelectorAll("span")[0].style.display = "inline";
+            document.querySelectorAll("span")[1].style.visibility = "visible";
+        }
+    }
+</script>
 
 </body>
 </html>
