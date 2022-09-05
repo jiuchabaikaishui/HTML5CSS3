@@ -5,23 +5,175 @@
     <title>Title</title>
 
     <style>
-        .one ~ li {
+        div.nav {
+            position: fixed;
+            left: 20px;
+            top: 44px;
+            background-color: #cccccc;
+        }
+        a {
+            line-height: 30px;
+        }
+        div.content {
+            width: 60%;
+            margin: auto;
+        }
+        ul {
+            width: 700px;
+            height: 500px;
+            margin: auto;
+            padding: 0;
+            margin-top: 44px;
+            list-style: none;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+        }
+        ul > li {
+            width: 100px;
+            height: 100px;
+            float: left;
+            text-align: center;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            line-height: 100px;
+            box-sizing: border-box;
+            background-color: #cae8ca;
+        }
+        li:first-child {
+            color: red;
+        }
+        li:last-child {
+            color: skyblue;
+        }
+        li:first-of-type {
+            color: red;
+        }
+        li:last-of-type {
+            background-color: pink;
+        }
+        li:nth-child(3) {
+            text-decoration: underline;
+        }
+        /*even：偶数，odd奇数*/
+        /*li:nth-child(even) {
+            background-color: green;
+        }
+        li:nth-child(odd) {
+            background-color: orange;
+        }*/
+        li:nth-last-of-type(even) {
+            background-color: green;
+        }
+        li:nth-last-of-type(odd) {
+            background-color: orange;
+        }
+        /*取值范围是0~子元素长度，小于1的值无效，如下表示前5个和后5个：*/
+        li:nth-of-type(-n+5) {
+            font-size: 30px;
+        }
+        li:nth-last-of-type(-n+5) {
+            text-decoration: underline;
+        }
+        li:empty {
+            background-color: yellow;
+        }
+
+        .one ~ p {
             color: cyan;
         }
-        .two + li {
+        .two + p {
             background-color: red;
+        }
+
+        div.target {
+            width: 100%;
+            height: 800px;
+            background-color: #cae8ca;
+        }
+        div.other {
+            width: 100%;
+            height: 800px;
+            background-color: bisque;
+        }
+        h3:target {
+            color: red;
         }
     </style>
 </head>
 <body>
 
-<ul>
-    <li class="one">第一行</li>
-    <li class="two">第二行</li>
-    <li class="three">第三行</li>
-    <li class="four">第四行</li>
-    <li class="five">第五行</li>
-</ul>
+<div class="nav">
+    <h3>目录</h3>
+    <a href="#title1">父元素结构伪类选择器</a> <br/>
+    <a href="#title2">兄弟元素结构伪类选择器</a> <br/>
+    <a href="#title3">target样式伪类选择器</a> <br/>
+    <a href="#title4">其他</a>
+</div>
+
+<div class="content">
+    <h2>伪类选择器</h2>
+
+    <h3 id="title1">相对于父元素结构伪类选择器</h3>
+    <ul>
+        <div></div>
+        <li>1</li>
+        <li>2</li>
+        <li></li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li>32</li>
+        <li>33</li>
+        <li>34</li>
+        <li>35</li>
+    </ul>
+
+    <h3 id="title2">相对于兄弟元素结构伪类选择器</h3>
+    <div>
+        <p class="one">第一行</p>
+        <p class="two">第二行</p>
+        <p class="three">第三行</p>
+        <p class="four">第四行</p>
+        <p class="five">第五行</p>
+        <p class="six">第六行</p>
+        <p class="seven">第七行</p>
+        <p class="eight">第八行</p>
+        <p class="nine">第九行</p>
+    </div>
+
+    <h3 id="title3">target样式伪类选择器</h3>
+    <div class="target">
+    </div>
+
+    <h3 id="title4">其他</h3>
+    <div class="other">
+    </div>
+</div>
 
 </body>
 </html>
