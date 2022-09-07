@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            width: 250px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        /*获取第一个字符，实现首字下沉效果*/
+        p.title::first-letter {
+            font-size: 40px;
+            /*文本环绕*/
+            float: left;
+        }
+        p.content::first-letter {
+            color: red;
+        }
+        /*获取第一行内容，如果设置了first-letter*/
+        p.content::first-line {
+            text-decoration: underline;
+        }
+        p.content::selection {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+<h2>其他伪元素</h2>
+<div>
+    <p class="title">静夜思</p>
+    <p class="content">床前明月光，疑似地上霜。<br/>举头望明月，低头思故乡。</p>
+</div>
+
+</body>
+</html>
