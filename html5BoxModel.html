@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+        div.content {
+            width: 70%;
+            margin: auto;
+            background-color: blanchedalmond;
+        }
+        h3 {
+            padding: 10px;
+            margin: 0;
+        }
+        div.group1 {
+            width: 100%;
+            height: 100px;
+        }
+        div.div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+            padding-right: 10px;
+            border-right: 10px solid pink;
+        }
+        div.div2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        }
+        div.group2 {
+            width: 100%;
+            height: 100px;
+        }
+        div.div3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: left;
+            padding-right: 10px;
+            border-right: 10px solid yellow;
+            box-sizing: border-box;
+        }
+        div.div4 {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            float: left;
+        }
+        div.demo {
+            width: 100%;
+            font-size: 0;
+        }
+        div.item {
+            width: 30%;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            overflow: hidden;
+            margin-left: 2.5%;
+            box-sizing: border-box;
+        }
+
+        /*鼠标往上移的时候触发*/
+        div.item:hover {
+            border: 5px cyan solid;
+        }
+    </style>
+</head>
+<body>
+
+<h2>盒模型</h2>
+<div class="content">
+    <h3>盒模型对比</h3>
+    <div class="group1">
+        <div class="div1"></div>
+        <div class="div2"></div>
+    </div>
+    <div class="group2">
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+
+    <h3>盒模型案例</h3>
+    <div class="demo">
+        <div class="item left"></div>
+        <div class="item center"></div>
+        <div class="item right"></div>
+    </div>
+</div>
+
+</body>
+</html>

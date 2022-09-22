@@ -7,7 +7,7 @@
         h2 {
             text-align: center;
         }
-        div {
+        div.content {
             width: 70%;
             margin: auto;
         }
@@ -15,8 +15,49 @@
             color: red;
         }
         li.color2 {
-            color: #000000;
-            background-color: #cae8ca99;
+            color: #ff0000;
+            background-color: #00ffff6e;
+        }
+        li.color3 {
+            color: rgb(255, 0, 0);
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+        li.color4 {
+            color: hsl(0, 100%, 50%);
+            background-color: hsla(180, 100%, 50%, 0.5);
+        }
+        div.text {
+            font-size: 70px;
+            background-color: ;
+            margin: 10px;
+        }
+        div.shadow1 {
+            color: white;
+            text-shadow: -1px -1px 2px red;
+        }
+        div.shadow2 {
+            color: white;
+            text-shadow: 0px 0px 10px white;
+        }
+        div.shadow3 {
+            color: black;
+            text-shadow: 0px 0px 5px white, 0px 0px 10px red;
+        }
+        div.shadow4 {
+            color: black;
+            text-shadow: 0px 1px 1px white;
+        }
+        div.shadow5 {
+            color: white;
+            text-shadow: -1px -1px 0px #eeeeee, -2px -2px 0px #cccccc, -3px -3px 0px #bbbbbb, -4px -4px 0px #aaaaaa;
+        }
+        div.shadow6 {
+            color: white;
+            text-shadow: 0px -1px 0px #eeeeee, 0px -2px 0px #cccccc, 0px -3px 0px #bbbbbb, 0px -4px 0px #aaaaaa;
+        }
+        div.shadow7 {
+            color: transparent;
+            text-shadow: 0px 0px 5px hsl(20, 100%, 50%);
         }
     </style>
 </head>
@@ -24,11 +65,20 @@
 
 <h2>颜色和文本阴影</h2>
 
-<div>
+<div class="content">
     <h3>颜色</h3>
-    <li class="color1">预设颜色值-红色</li>
-    <li class="color2">预设颜色值-红色</li>
+    <li class="color1">预设颜色值</li>
+    <li class="color2">RGB/RGBA颜色值</li>
+    <li class="color3">rgb/rgba颜色函数</li>
+    <li class="color4">hsl/hsla颜色函数</li>
     <h3>文本阴影</h3>
+    <div class="text shadow1">阴影文字一</div>
+    <div class="text shadow2">阴影文字二</div>
+    <div class="text shadow3">阴影文字三</div>
+    <div class="text shadow4">阴影文字四</div>
+    <div class="text shadow5">阴影文字五</div>
+    <div class="text shadow6">阴影文字六</div>
+    <div class="text shadow7">阴影文字七</div>
 </div>
 
 </body>

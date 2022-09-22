@@ -1,0 +1,100 @@
+in<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+        div.content {
+            width: 450px;
+            height: 450px;
+            border: 1px solid darkgray;
+            margin: auto;
+            background-color: blanchedalmond;
+        }
+        div.robot {
+            background-color: green;
+        }
+        div.header {
+            width: 200px;
+            height: 100px;
+            position: relative;
+            margin-top: 15px;
+            left: 125px;
+            border-radius: 100px 100px 0px 0px;
+        }
+        div.header::before, div.header::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 10px;
+            top: 50px;
+        }
+        div.header::before {
+            left: 60px;
+        }
+        div.header::after {
+            right: 60px;
+        }
+        div.body {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin-top: 10px;
+            left: 125px;
+            border-radius: 0px 0px 20px 20px;
+        }
+        div.body::before, div.body::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 120px;
+            background-color: green;
+            border-radius: 8px;
+            top: 20px;
+        }
+        div.body::before {
+            left: -35px;
+        }
+        div.body::after {
+            right: -35px;
+        }
+        div.footer {
+            width: 200px;
+            height: 80px;
+            position: relative;
+            margin: auto;
+            background-color: transparent;
+        }
+        div.footer::before, div.footer::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 80px;
+            background-color: green;
+            border-radius: 0px 0px 8px 8px;
+        }
+        div.footer::before {
+            left: 40px;
+        }
+        div.footer::after {
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>机器人案例</h2>
+<div class="content">
+    <div class="robot header"></div>
+    <div class="robot body"></div>
+    <div class="robot footer"></div>
+</div>
+
+</body>
+</html>
