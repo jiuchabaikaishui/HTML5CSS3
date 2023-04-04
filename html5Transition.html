@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            padding: 20px;
+            text-align: center;
+        }
+        h3 {
+            padding: 15px;
+            text-align: center;
+        }
+        div.div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            left: 100px;
+            transition-property: left;
+            transition-duration: 3.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+        }
+        /* 点击按住 */
+        div.div1:active {
+            left: 1000px;
+        }
+        div.div2 {
+            margin: 0;
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            position: relative;
+            left: 100px;
+            transition: left 3.5s ease-in-out 1s, background-color 5s ease-in;
+        }
+        div.div2:active {
+            left: 1000px;
+            background-color: red;
+        }
+        div.div3 {
+            margin: auto;
+            width: 400px;
+            height: auto;
+        }
+        h4 {
+            margin: 0;
+            background-color: azure;
+            height: 44px;
+            line-height: 44px;
+            position: relative;
+            padding-left: 10px;
+            border-left: 2px solid #ccc;
+            border-right: 2px solid #ccc;
+        }
+        h4.top {
+            border-top: 2px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        h4.center {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        h4.bottom {
+            border-top: 1px solid #ccc;
+            border-bottom: 2px solid #ccc;
+        }
+        div.itembox {
+            margin: 0;
+            height: 0px;
+            overflow: hidden;
+            background-color: antiquewhite;
+            transition: all 0.35s ease-in-out;
+            -moz-transition: all 0.35s ease-in-out;
+            -webkit-transition: all 0.35s ease-in-out;
+            -o-transition: all 0.35s ease-in-out;
+        }
+        div.div3:hover > div.itembox {
+            height: 120px;
+        }
+        ul {
+            margin: 0;
+            padding: 10px 20px 10px 20px;
+            list-style: none;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2>过渡动画</h2>
+    <h3>过渡动画基础</h3>
+    <div class="div1"></div>
+    <div class="div2">简写</div>
+    
+    <h3>手风琴案例</h3>
+    <div class="div3">
+        <h4 class="top">国际新闻</h4>
+        <div class="itembox">
+            <ul>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+            </ul>
+        </div>
+    </div>
+    <div class="div3">
+        <h4 class="center">国内新闻</h4>
+        <div class="itembox">
+            <ul>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+            </ul>
+        </div>
+    </div>
+    <div class="div3">
+        <h4 class="bottom">市内新闻</h4>
+        <div class="itembox">
+            <ul>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+                <li>某人又扶老奶奶过马路了</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

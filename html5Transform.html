@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin: 20px;
+            text-align: center;
+        }
+        h3 {
+            margin: 15px;
+            text-align: center;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-top: 10px;
+            background-color: #ccc;
+            transition: transform 0.35s ease-in-out;
+        }
+
+        div.transform:nth-of-type(1):active {
+            transform: translate(100px, 110px);
+        }
+        div.transform:nth-of-type(2):active {
+            transform: translateX(100px) translateY(110px);
+        }
+        div.transform:nth-of-type(3):active {
+            transform: scale(2, 0.5);
+        }
+        div.transform:nth-of-type(4):active {
+            transform: scaleX(2) scaleY(0.5);
+        }
+        div.transform:nth-of-type(5):active {
+            transform: rotate(90deg);
+        }
+        div.transform:nth-of-type(6):active {
+            transform: skew(45deg, 45deg);
+        }
+        div.transform:nth-of-type(7):active {
+            transform: skewX(45deg) skewY(45deg);
+        }
+
+        div.pkBox {
+            width: 125px;
+            height: 195px;
+            margin: auto;
+            margin-top: 250px;
+            margin-bottom: 50px;
+            position: relative;
+            background-color: white;
+        }
+        div.pkBox > img {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-origin: center top;
+            transition: transform 0.35s ease-in-out;
+        }
+        div.pkBox:active > img:nth-of-type(1) {
+            transform: rotate(60deg); 
+        }
+        div.pkBox:active > img:nth-of-type(2) {
+            transform: rotate(120deg);
+        }
+        div.pkBox:active > img:nth-of-type(3) {
+            transform: rotate(180deg);
+        }
+        div.pkBox:active > img:nth-of-type(4) {
+            transform: rotate(240deg);
+        }
+        div.pkBox:active > img:nth-of-type(5) {
+            transform: rotate(300deg);
+        }
+        div.pkBox:active > img:nth-of-type(6) {
+            transform: rotate(360deg);
+        }
+
+        div.dunpai { 
+            font-size: 0;
+            background-color: white;
+            width: 300px;
+            height: 360px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        div.dunpai > img {
+            width: 100px;
+            height: 120px;
+            transition: transform 0.35s ease-in-out;
+        }
+        div.dunpai > img:nth-of-type(1) {
+            transform: translate(-150px, 100px) rotate(60deg) scale(1.3);
+        }
+        div.dunpai > img:nth-of-type(2) {
+            transform: translate(-200px, -90px) rotate(30deg) scale(0.7);
+        }
+        div.dunpai > img:nth-of-type(3) {
+            transform: translate(50px, -50px) rotate(90deg) scale(0.5);
+        }
+        div.dunpai > img:nth-of-type(4) {
+            transform: translate(20px, -150px) rotate(120deg) scale(1.1);
+        }
+        div.dunpai > img:nth-of-type(5) {
+            transform: translate(50px, 60px) rotate(140deg) scale(0.8);
+        }
+        div.dunpai > img:nth-of-type(6) {
+            transform: translate(250px, 100px) rotate(170deg) scale(1.2);
+        }
+        div.dunpai > img:nth-of-type(7) {
+            transform: translate(-40px, -160px) rotate(145deg) scale(0.6);
+        }
+        div.dunpai > img:nth-of-type(8) {
+            transform: translate(-80px, -40px) rotate(180deg) scale(1.2);
+        }
+        div.dunpai > img:nth-of-type(9) {
+            transform: translate(70px, 60px) rotate(240deg) scale(0.8);
+        }
+        div.dunpai:hover > img {
+            transform: none;
+        }
+
+        div.circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 150px;
+            position: relative;
+        }
+        div.rect {
+            background-color: aqua;
+            position: absolute;
+            /* 定位百分比参照父元素 */
+            left: 50%;
+            top: 50%;
+            /* transform百分比参照自身 */
+            transform: translate(-50%, -50%);
+        }
+
+        div.transform3d {
+            width: 300px;
+            height: auto;
+            background-color: white;
+        }
+        div.transform3d > div {
+            transition: transform 0.35s ease-in-out;
+            background-color: red;
+        }
+        div.transform3d > div:nth-of-type(1):active {
+            transform: translate3d(100px, 110px, 100px);
+        }
+        div.transform3d > div:nth-of-type(2):active {
+            transform: scale3d(2, 0.5, 3);
+        }
+        div.transform3d > div:nth-of-type(3):active {
+            transform: rotate3d(1, 1, 1, 90deg);
+        }
+    </style>
+</head>
+<body>
+    <h2>Transform</h2>
+    
+    <h3>二维变化</h3>
+    <div class="transform">transform</div>
+    <div class="transform">translateX、translateY</div>
+    <div class="transform">scale</div>
+    <div class="transform">scaleX、scaleY</div>
+    <div class="transform">rotate</div>
+    <div class="transform">skew</div>
+    <div class="transform">skewX、skewY</div>
+    
+    <h3>扑克牌案例</h3>
+    <div class="pkBox">
+        <img src="images/hongtaoJ.png" alt="">
+        <img src="images/hongtaoQ.png" alt="">
+        <img src="images/hongtaoK.png" alt="">
+        <img src="images/fangkuaiJ.png" alt="">
+        <img src="images/fangkuaiQ.png" alt="">
+        <img src="images/fangkuaiK.png" alt="">
+    </div>
+
+    <h3>为transform添加多个属性</h3>
+    <div class="dunpai">
+        <img src="images/dunpai1.png" alt="">
+        <img src="images/dunpai2.png" alt="">
+        <img src="images/dunpai3.png" alt="">
+        <img src="images/dunpai4.png" alt="">
+        <img src="images/dunpai5.png" alt="">
+        <img src="images/dunpai6.png" alt="">
+        <img src="images/dunpai7.png" alt="">
+        <img src="images/dunpai8.png" alt="">
+        <img src="images/dunpai9.png" alt="">
+    </div>
+
+    <h3>经典案例元素中心对齐</h3>
+    <div class="circle">
+        <div class="rect"></div>
+    </div>
+
+    <h3>三维变换</h3>
+    <div class="transform3d">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

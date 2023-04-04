@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin: 20px;
+            text-align: center;
+        }
+        h3 {
+            margin: 20px;
+            text-align: center;
+        }
+        div {
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            margin-top: 20px;
+            background-color: lightgray;
+        }
+        div.div1 {
+            background-color: skyblue;
+        }
+        div.div2 {
+            background-image: url("images/huliena.jpeg");
+        }
+        div.div3 {
+            background-image: url("images/message.png");
+        }
+        div.div4 {
+            background-image: url("images/message.png");
+            background-repeat: round;
+        }
+        div.div5 {
+            background-image: url("images/message.png");
+            background-repeat: space;
+        }
+        div.div6 {
+            background-image: url("images/message.png");
+            background-attachment: fixed;
+        }
+        div.div7 {
+            background-image: url("images/message.png");
+            background-attachment: scroll;
+        }
+        div.div8 {
+            background-image: url("images/message.png");
+            overflow: scroll;
+            background-attachment: local;
+        }
+        div.div9 {
+            background-image: url("images/message.png");
+            overflow: scroll;
+            background-attachment: scroll;
+        }
+        div.div10 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        div.div11 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: 400px auto;
+        }
+        div.div12 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: 50% auto;
+        }
+        div.div13 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: auto 50%;
+        }
+        div.div14 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        div.div15 {
+            background-image: url("images/one.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        div.div16 {
+            background-image: url("images/huliena.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div.div17 {
+            background-image: url("images/one.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        div.div18 {
+            width: 100%;
+            height: 360px;
+            background-image: url("images/red.jpg");
+            background-size: cover;
+            /*定位图片居中*/
+            background-position: center;
+        }
+        a {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 100px;
+            box-sizing: border-box;
+            display: block;
+            border: solid 1px red;
+            background-image: url("images/pictures.jpeg");
+            background-position: -231px -195px;
+            background-origin: content-box;
+            background-clip: content-box;
+        }
+        div.div19 {
+            width: 300px;
+            height: auto;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+            border: solid 30px red;
+            /* border-image-source: url(images/qipao.png);
+            border-image-slice: 100 fill;
+            border-image-width: 30px;
+            border-image-outset: 0px;
+            border-image-repeat: stretch; */
+
+            /* 简写 */
+            /* border-image: source slice/width/outset repeat; */
+            border-image: url(images/qipao.png) 100 fill/30px/0 stretch;
+        }
+    </style>
+</head>
+<body>
+    <h2>背景</h2>
+    
+    
+    <h3>背景颜色</h3>
+    <div class="div1"></div>
+    
+    <h3>背景图片</h3>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8">
+        <p style="height: 800px"></p>
+    </div>
+    <div class="div9">
+        <p style="height: 800px"></p>
+    </div>
+    
+    <h3>背景图片尺寸</h3>
+    <div class="div10"></div>
+    <div class="div11"></div>
+    <div class="div12"></div>
+    <div class="div13"></div>
+    <div class="div14"></div>
+    <div class="div15"></div>
+    <div class="div16"></div>
+    <div class="div17"></div>
+    <div class="div18"></div>
+    
+    <h3>背景图片坐标与裁剪</h3>
+    <a href=""></a>
+    
+    <h3>边框图片</h3>
+    <div class="div19">边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片边框图片</div>
+</body>
+</html>
