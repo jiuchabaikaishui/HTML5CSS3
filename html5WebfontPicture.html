@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebFontPicture</title>
+
+    <style>
+        @font-face {
+            font-family: 'webfont';
+            font-display: swap;
+            src: url('fonts/webfont_mjhhrv4rmgj/webfont.eot'); /* IE9 */
+            src: url('fonts/webfont_mjhhrv4rmgj/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('fonts/webfont_mjhhrv4rmgj/webfont.woff2') format('woff2'),
+            url('fonts/webfont_mjhhrv4rmgj/webfont.woff') format('woff'), /* chrome、firefox */
+            url('fonts/webfont_mjhhrv4rmgj/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('fonts/webfont_mjhhrv4rmgj/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+        }
+        .web-font {
+            font-family: webfont;
+        }
+
+        @font-face {
+            font-family: 'iconfont';
+            src: url('fonts/font_ny15g6aig4b/iconfont.ttf') format('truetype');
+        }
+        .icon-font {
+            font-family: iconfont;
+            font-size: 50px;
+            color: red;
+        }
+
+        .dingdan::before {
+            font-family: iconfont;
+            content: "\e8ae";
+            font-size: 50px;
+            color: red;
+        }
+        .fengxiang::before {
+            font-family: iconfont;
+            content: "\e8b0";
+            font-size: 50px;
+            color: green;
+        }
+        .shouji::before {
+            font-family: iconfont;
+            content: "\e8b9";
+            font-size: 50px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Web字体和字体图标</h2>
+
+    <h3>Web字体</h3>
+    <span class="web-font">可以为网页指定特殊字体而无需考虑用户是否安装此字体，不同系统不同浏览器支持的字体文件不同（主要有ttf、otf、woff、eot、svg）。撒娇时代峰峻</span>
+
+    <h3>字体图标</h3>
+    <span class="icon-font">&#xe8ae;&#xe8b0;&#xe8b9;</span> <br>
+    <span class="dingdan"></span>
+    <span class="fengxiang"></span>
+    <span class="shouji"></span>
+</body>
+</html>

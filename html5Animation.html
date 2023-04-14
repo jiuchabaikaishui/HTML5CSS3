@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin: 20px;
+            text-align: center;
+        }
+        h3 {
+            margin: 15px;
+            text-align: center;
+        }
+
+        div.base {
+            margin: auto;
+            width: 200px;
+            height: 250px;
+        }
+        div.base > input {
+            margin-top: 115px;
+        }
+        div.animation {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+
+            animation-name: animationBase;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-play-state: running;
+        }
+        
+        /* 创建动画 */
+        @keyframes animationBase {
+            /* 百分比指的是动画耗时的百分比 */
+            0% {
+                transform: translate(0px, 0px) rotate(45deg);
+            }
+            33% {
+                transform: translate(100px);
+            }
+            67% {
+                transform: translate(100px, 100px);
+            }
+            100% {
+                transform: translate(0px, 100px);
+            }
+        }
+
+        div.scrollDiv {
+            margin: auto;
+            width: 480px;
+            height: 120px;
+            overflow: hidden;
+        }
+        div.scrollDiv > ul.scrollUl {
+            width: 960px;
+            animation-name: scrollAnimation;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        div.scrollDiv:hover > ul.scrollUl {
+            /* 光标为小手 */
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+        div.scrollDiv > ul.scrollUl > li {
+            width: 120px;
+            float: left;
+        }
+        div.scrollDiv > ul.scrollUl > li > img {
+            width: 120px;
+            height: 120px;
+        }
+        @keyframes scrollAnimation {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translate(-480px);
+            }
+        }
+
+        div.clock {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            margin-bottom: 20px;
+            border: solid 8px black;
+            border-radius: 50%;
+            position: relative;
+        }
+        div.line {
+            width: 8px;
+            height: 200px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        div.line1, div.line4 {
+            width: 10px;
+        }
+        div.line2 {
+            transform: translate(-50%) rotate(30deg);
+        }
+        div.line3 {
+            transform: translate(-50%) rotate(60deg);
+        }
+        div.line4 {
+            transform: translate(-50%) rotate(90deg);
+        }
+        div.line5 {
+            transform: translate(-50%) rotate(120deg);
+        }
+        div.line6 {
+            transform: translate(-50%) rotate(150deg);
+        }
+        div.cover {
+            width: 184px;
+            height: 184px;
+            border-radius: 92px;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div.pin {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -100%);
+            transform-origin: center bottom;
+        }
+        div.hour {
+            background-color: red;
+            width: 7px;
+            height: 50px;
+            animation: clockAnimation 43200s linear infinite;
+        }
+        div.minute {
+            background-color: green;
+            width: 5px;
+            height: 65px;
+            animation: clockAnimation 3600s linear infinite;
+        }
+        div.second {
+            background-color: blue;
+            width: 3px;
+            height: 80px;
+            animation: clockAnimation 60s steps(60) infinite;
+        }
+        div.center {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: darkgray;
+        }
+
+        @keyframes clockAnimation {
+            from {
+                transform: translate(-50%, -100%) rotate(0);
+            }
+            to {
+                transform: translate(-50%, -100%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation动画</h2>
+
+    <h3>动画基础</h3>
+    <div class="base">
+        <div class="animation"></div>
+
+        <input id="paused" type="button" value="暂停">
+        <input id="running" type="button" value="开始">
+    </div>
+
+    <h3>无缝滚动案例</h3>
+    <div class="scrollDiv">
+        <ul class="scrollUl">
+            <li><img src="images/scroll1.png" alt=""></li>
+            <li><img src="images/scroll2.png" alt=""></li>
+            <li><img src="images/scroll3.png" alt=""></li>
+            <li><img src="images/scroll4.png" alt=""></li>
+            <li><img src="images/scroll1.png" alt=""></li>
+            <li><img src="images/scroll2.png" alt=""></li>
+            <li><img src="images/scroll3.png" alt=""></li>
+            <li><img src="images/scroll4.png" alt=""></li>
+        </ul>
+    </div>
+
+    <h3>时钟案例</h3>
+    <div class="clock">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+        <div class="line line4"></div>
+        <div class="line line5"></div>
+        <div class="line line6"></div>
+
+        <div class="cover"></div>
+
+        <div class="pin hour"></div>
+        <div class="pin minute"></div>
+        <div class="pin second"></div>
+
+        <div class="center"></div>
+    </div>
+
+    <script>
+        var animationEle = document.querySelector(".animation");
+        document.querySelector("#paused").onclick = function () {
+            animationEle.style.animationPlayState = "paused";
+        }
+        document.querySelector("#running").onclick = function () {
+            animationEle.style.animationPlayState = "running";
+        }
+    </script>
+</body>
+</html>

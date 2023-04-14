@@ -23,10 +23,12 @@
             height: 100px;
             margin: auto;
             margin-top: 10px;
-            background-color: #ccc;
             transition: transform 0.35s ease-in-out;
         }
 
+        div.transform {
+            background-color: #ccc;
+        }
         div.transform:nth-of-type(1):active {
             transform: translate(100px, 110px);
         }
@@ -130,6 +132,7 @@
         }
 
         div.circle {
+            background-color: #ccc;
             width: 300px;
             height: 300px;
             border-radius: 150px;
@@ -162,6 +165,44 @@
         }
         div.transform3d > div:nth-of-type(3):active {
             transform: rotate3d(1, 1, 1, 90deg);
+        }
+
+        div.box3d {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            transform: rotate3d(1, 1, 0, -30deg);
+            transform-style: preserve-3d;
+            perspective: 500px;
+            perspective-origin: 100px 100px;
+        }
+        div.box3d > div {
+            position: absolute;
+            opacity: 0.5;
+        }
+        div.box3d > div:nth-of-type(1) {
+            background-color: red;
+            transform: translateZ(50px);
+        }
+        div.box3d > div:nth-of-type(2) {
+            background-color: green;
+            transform: translateZ(-50px);
+        }
+        div.box3d > div:nth-of-type(3) {
+            background-color: blue;
+            transform: translateX(-50px) rotateY(-90deg);
+        }
+        div.box3d > div:nth-of-type(4) {
+            background-color: cyan;
+            transform: translateX(50px) rotateY(90deg);
+        }
+        div.box3d > div:nth-of-type(5) {
+            background-color: pink;
+            transform: translateY(-50px) rotateX(90deg);
+        }
+        div.box3d > div:nth-of-type(6) {
+            background-color: yellow;
+            transform: translateY(50px) rotateX(90deg);
         }
     </style>
 </head>
@@ -210,6 +251,16 @@
         <div></div>
         <div></div>
         <div></div>
+    </div>
+
+    <h3>立方体案例</h3>
+    <div class="box3d">
+        <div>前</div>
+        <div>后</div>
+        <div>左</div>
+        <div>右</div>
+        <div>上</div>
+        <div>下</div>
     </div>
 </body>
 </html>

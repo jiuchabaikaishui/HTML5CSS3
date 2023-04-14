@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisplayFlex</title>
+
+    <style>
+        h2 {
+            text-align: center;
+        }
+        div.box {
+            box-sizing: border-box;
+            border: 1px solid darkgray;
+            margin: auto;
+            width: 1000px;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+        }
+        div.box > div {
+            width: 200px;
+            height: 100%;
+        }
+        div.box > div.first {
+            background-color: red;
+        }
+        div.box > div.second {
+            background-color: green;
+        }
+        div.box > div.third {
+            background-color: blue;
+        }
+        div.box > div.fourth {
+            background-color: cyan;
+        }
+
+        div.box1 {
+            margin: 20px auto;
+            width: 900px;
+            height: 600px;
+            box-sizing: border-box;
+            border: 1px solid darkgray;
+            display: flex;
+            justify-content: space-around;
+            /* flex-wrap: wrap-reverse;
+            flex-direction: column-reverse; */
+            flex-flow: wrap-reverse column-reverse;
+        }
+        div.box1 > div {
+            width: 200px;
+            height: 200px;
+        }
+        div.box1 > div.one {
+            background-color: red;
+        }
+        div.box1 > div.two {
+            background-color: green;
+        }
+        div.box1 > div.three {
+            background-color: blue;
+        }
+        div.box1 > div.four {
+            background-color: cyan;
+        }
+        div.box1 > div.five {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>伸缩布局</h2>
+    <div class="box">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="fourth"></div>
+    </div>
+
+    <div class="box1">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+    </div>
+</body>
+</html>
