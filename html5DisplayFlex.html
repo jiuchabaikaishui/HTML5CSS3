@@ -7,7 +7,7 @@
     <title>DisplayFlex</title>
 
     <style>
-        h2 {
+        h2, h3 {
             text-align: center;
         }
         div.box {
@@ -37,7 +37,7 @@
         }
 
         div.box1 {
-            margin: 20px auto;
+            margin: auto;
             width: 900px;
             height: 600px;
             box-sizing: border-box;
@@ -67,10 +67,160 @@
         div.box1 > div.five {
             background-color: pink;
         }
+
+        div.box2 {
+            margin: auto;
+            width: 900px;
+            height: 400px;
+            border: 1px solid darkgray;
+            display: flex;
+            justify-content: space-around;
+        }
+        div.box2 > div {
+            width: 200px;
+            height: 200px;
+        }
+        div.box2 > div.one {
+            background-color: red;
+            flex-grow: 1;
+        }
+        div.box2 > div.two {
+            background-color: green;
+        }
+        div.box2 > div.three {
+            background-color: blue;
+            flex-grow: 1;
+        }
+
+        div.box3 {
+            margin: auto;
+            width: 500px;
+            height: 400px;
+            border: 1px solid darkgray;
+            display: flex;
+            justify-content: space-around;
+        }
+        div.box3 > div {
+            width: 200px;
+            height: 200px;
+        }
+        div.box3 > div.one {
+            background-color: red;
+            flex-shrink: 2;
+        }
+        div.box3 > div.two {
+            background-color: green;
+            flex-shrink: 1;
+        }
+        div.box3 > div.three {
+            background-color: blue;
+            flex-shrink: 1;
+        }
+
+        div.box4 {
+            width: 100%;
+            height: 500px;
+            background-color: antiquewhite;
+            display: flex;
+        }
+        div.box4 > div.left {
+            flex: 1;
+            background-color: red;
+        }
+        div.box4 > div.right {
+            flex: 4;
+            background-color: green;
+        }
+
+        div.box5 {
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            border: 1px dotted darkgray;
+        }
+        div.box5 > ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            list-style: none;
+            display: flex;
+        }
+        div.box5 > ul > li {
+            flex: 1;
+            margin: 0;
+            line-height: 44px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 1px solid skyblue;
+            background-color: aquamarine;
+        }
+
+        div.box6 {
+            margin: auto;
+            border: 1px solid darkgray;
+            width: 900px;
+            height: 600px;
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+        div.box6 > div {
+            width: 200px;
+            height: 200px;
+        }
+        div.box6 > div.one {
+            background-color: red;
+        }
+        div.box6 > div.two {
+            background-color: green;
+        }
+        div.box6 > div.three {
+            background-color: blue;
+            align-self: flex-end;
+        }
+
+        div.display {
+            margin: auto;
+            width: 500px;
+            height: 600px;
+            background-color: lightgray;
+            /* 设置父容器为伸缩盒子 */
+            display: flex;
+            /* 默认主轴为row，这里需要以列的方式排列 */
+            flex-direction: column;
+        }
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: red;
+        }
+        main {
+            width: 100%;
+            background-color: green;
+            /* 占据父容器剩余空间 */
+            flex: 1;
+            display: flex;
+        }
+        article {
+            height: 100%;
+            background-color: cyan;
+            flex: 1;
+        }
+        aside {
+            height: 100%;
+            background-color: pink;
+            flex: 3;
+        }
+        footer {
+            width: 100%;
+            height: 49px;
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
     <h2>伸缩布局</h2>
+    <h3>justify-content</h3>
     <div class="box">
         <div class="first"></div>
         <div class="second"></div>
@@ -78,12 +228,61 @@
         <div class="fourth"></div>
     </div>
 
+    <h3>flex-flow</h3>
     <div class="box1">
         <div class="one">1</div>
         <div class="two">2</div>
         <div class="three">3</div>
         <div class="four">4</div>
         <div class="five">5</div>
+    </div>
+
+    <h3>flex-grow</h3>
+    <div class="box2">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+
+    <h3>flex-shrink</h3>
+    <div class="box3">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+    </div>
+
+    <h3>flex</h3>
+    <div class="box4">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <h3>伸缩菜单项</h3>
+    <div class="box5">
+        <ul>
+            <li>首页</li>
+            <li>商品分类</li>
+            <li>我的订单</li>
+            <li>最新商品</li>
+            <li>联系我们</li>
+        </ul>
+    </div>
+
+    <h3>align-items</h3>
+    <div class="box6">
+        <div class="one" style="font-size: 20px;">One</div>
+        <div class="two" style="font-size: 100px;">Two</div>
+        <div class="three" style="font-size: 50px;">Three</div>
+    </div>
+
+    <h3>综合案例</h3>
+    <div class="display">
+        <header></header>
+        <main>
+            <article></article>
+            <aside></aside>
+        </main>
+        <footer></footer>
     </div>
 </body>
 </html>
