@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360引导页</title>
+
+    <link rel="stylesheet" href="css/360Page.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <!-- <style>
+        .logo {
+            background-image: url(images/icon-test.png);
+        }
+    </style> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/fullpage.js"></script>
+</head>
+<body>
+    <div id="360Page">
+        <div class="section first">
+            <!-- <h3>第一屏</h3> -->
+            <div class="logo"></div>
+            <div class="title">360安全浏览器</div>
+            <div class="text">
+                <span>4</span>
+                <span>亿</span>
+                <span>网</span>
+                <span>友</span>
+                <span>共</span>
+                <span>同</span>
+                <span>信</span>
+                <span>赖</span>
+            </div>
+            <div class="intro">更安全，更爽快，更智能，更时尚</div>
+        </div>
+        <div class="section second">
+            <div class="dunpai">
+                <img src="images/dunpai1.png" alt="">
+                <img src="images/dunpai2.png" alt="">
+                <img src="images/dunpai3.png" alt="">
+                <img src="images/dunpai4.png" alt="">
+                <img src="images/dunpai5.png" alt="">
+                <img src="images/dunpai6.png" alt="">
+                <img src="images/dunpai7.png" alt="">
+                <img src="images/dunpai8.png" alt="">
+                <img src="images/dunpai9.png" alt="">
+            </div>
+            <div class="info">
+                <div class="top">9层安全防护，</div>
+                <div class="center">全面保护更安全！</div>
+                <div class="bottom">网购先赔、网购保镖、网址云安全、下载云安全、沙箱防护、隔离防护、系统级防注人、网站照妖镜、安全键盘</div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>第三屏</h3>
+        </div>
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+        <div class="section">
+            <h3>第五屏</h3>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#360Page').fullpage({
+                // 设置背景色
+                sectionsColor: ['#0da5d6', '#2ab561', '#de8910', '#16ba9d', '#0da5d6'],
+                verticalCentered: false,
+                afterLoad: function(origin, destination, direction, trigger){
+                    setTimeout(() => {
+                        // 移除原始屏current标记
+                        $(".section").eq(origin.index).removeClass("current");
+                        // 添加目的屏current标记
+                        $(".section").eq(destination.index).addClass("current");
+                    }, 200);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

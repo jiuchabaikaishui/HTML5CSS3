@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全屏插件</title>
+
+    <link rel="stylesheet" href="css/fullpage.css">
+    <style>
+        /* 交集选择器，同时添加了section和current才会有效果 */
+        /* 插件会为section添加一个顶层子元素，所以代码中section的子元素并不是其直接的子元素 */
+        .section.current h3 {
+            font-size: 100px;
+        }
+    </style>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/fullpage.js"></script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <h3>第一屏</h3>
+            <div class="logo"></div>
+            <div class="title">
+                <span>4</span>
+                <span>亿</span>
+                <span>网</span>
+                <span>友</span>
+                <span>共</span>
+                <span>同</span>
+                <span>信</span>
+                <span>赖</span>
+            </div>
+            <div class="text"></div>
+            <div class="intro">更安全，更爽快，更智能，更时尚</div>
+        </div>
+        <div class="section">
+            <h3>第二屏</h3>
+        </div>
+        <div class="section">
+            <h3>第三屏</h3>
+        </div>
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+        <div class="section">
+            <h3>第五屏</h3>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                // 设置背景色
+                sectionsColor: ['#0da5d6', '#2ab561', '#de8910', '#16ba9d', '#0da5d6'],
+                afterLoad: function(origin, destination, direction, trigger){
+                    var index = destination.index;
+                    console.log(index);
+                    // 移除原始屏current标记
+                    $(".section").eq(origin.index).removeClass("current");
+                    // 添加目的屏current标记
+                    $(".section").eq(index).addClass("current");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

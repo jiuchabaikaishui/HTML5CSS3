@@ -1,0 +1,118 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+/* 交集选择器，同时添加了section和current才会有效果 */
+/* 插件会为section添加一个顶层子元素，所以代码中section的子元素并不是其直接的子元素 */
+.section.current h3 {
+    font-size: 100px;
+}
+
+/* 第一屏 */
+.logo {
+    background-image: url(../images/icon-test.png);
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 80px;
+}
+.title {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+.text {
+    margin-top: 30px;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.text > span {
+    margin: 0 40px;
+    opacity: 0.2;
+}
+.section.current .text > span {
+    transition: margin 0.35s linear, opacity 0.35s linear;
+    margin: 0 10px;
+    opacity: 1;
+}
+.intro {
+    margin-top: 20px;
+    font-size: 45px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 第二屏 */
+.second > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+div.dunpai { 
+    font-size: 0;
+    width: 390px;
+}
+div.dunpai > img {
+    width: 130px;
+    height: 168px;
+    transition: transform 0.35s linear;
+}
+.section.current .dunpai > img {
+    transform: none;
+}
+div.dunpai > img:nth-of-type(1) {
+    transform: translate(-150px, 100px) rotate(60deg) scale(1.3);
+}
+div.dunpai > img:nth-of-type(2) {
+    transform: translate(-200px, -90px) rotate(30deg) scale(0.7);
+}
+div.dunpai > img:nth-of-type(3) {
+    transform: translate(50px, -50px) rotate(90deg) scale(0.5);
+}
+div.dunpai > img:nth-of-type(4) {
+    transform: translate(20px, -150px) rotate(120deg) scale(1.1);
+}
+div.dunpai > img:nth-of-type(5) {
+    transform: translate(50px, 60px) rotate(140deg) scale(0.8);
+}
+div.dunpai > img:nth-of-type(6) {
+    transform: translate(250px, 100px) rotate(170deg) scale(1.2);
+}
+div.dunpai > img:nth-of-type(7) {
+    transform: translate(-40px, -160px) rotate(145deg) scale(0.6);
+}
+div.dunpai > img:nth-of-type(8) {
+    transform: translate(-80px, -40px) rotate(180deg) scale(1.2);
+}
+div.dunpai > img:nth-of-type(9) {
+    transform: translate(70px, 60px) rotate(240deg) scale(0.8);
+}
+.info {
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info > .top {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.info > .center {
+    font-size: 60px;
+    color: white;
+    margin-top: 10px;
+}
+.info > .bottom {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 30px;
+}
