@@ -10,7 +10,7 @@
 }
 
 /* 第一屏 */
-.logo {
+.first .logo {
     background-image: url(../images/icon-test.png);
     background-size: 100px 100px;
     width: 100px;
@@ -18,13 +18,13 @@
     margin: auto;
     margin-top: 80px;
 }
-.title {
+.first .title {
     margin-top: 20px;
     font-size: 30px;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
 }
-.text {
+.first .text {
     margin-top: 30px;
     font-size: 80px;
     text-align: center;
@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
 }
-.text > span {
+.first .text > span {
     margin: 0 40px;
     opacity: 0.2;
 }
@@ -41,7 +41,7 @@
     margin: 0 10px;
     opacity: 1;
 }
-.intro {
+.first .intro {
     margin-top: 20px;
     font-size: 45px;
     text-align: center;
@@ -56,16 +56,16 @@
     width: 100%;
     height: 100%;
 }
-div.dunpai { 
+.second div.dunpai { 
     font-size: 0;
     width: 390px;
 }
-div.dunpai > img {
+.second div.dunpai > img {
     width: 130px;
     height: 168px;
     transition: transform 0.35s linear;
 }
-.section.current .dunpai > img {
+.section.current div.dunpai > img {
     transform: none;
 }
 div.dunpai > img:nth-of-type(1) {
@@ -95,24 +95,77 @@ div.dunpai > img:nth-of-type(8) {
 div.dunpai > img:nth-of-type(9) {
     transform: translate(70px, 60px) rotate(240deg) scale(0.8);
 }
-.info {
+.second .info {
     width: 600px;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.info > .top {
+.second .info > .top {
     font-size: 60px;
     color: rgba(255, 255, 255, 0.8);
 }
-.info > .center {
+.second .info > .center {
     font-size: 60px;
     color: white;
     margin-top: 10px;
 }
-.info > .bottom {
+.second .info > .bottom {
     font-size: 22px;
     color: rgba(255, 255, 255, 0.6);
     margin-top: 30px;
+}
+
+/* 第三屏 */
+.third > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.third .info {
+    width: 550px;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(0, -50%);
+}
+.third .info > .top {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.third .info > .center {
+    font-size: 60px;
+    color: white;
+    margin-top: 10px;
+}
+.third .info > .bottom {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 30px;
+}
+.third .circle {
+    background-image: url(../images/c161yuanquan.png);
+    width: 400px;
+    height: 400px;
+    background-size: 400px 400px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(0, -50%);
+}
+.third .circle > .huojian {
+    background-image: url(../images/huojian.png);
+    background-size: 150px, 150px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-350%, 250%);
+    transition: transform 0.35s linear;
+}
+.section.current .circle > .huojian {
+    transform: translate(-50%, -50%);
 }
